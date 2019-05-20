@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 10:39:03 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/20 12:45:21 by kmatjeke         ###   ########.fr       */
+/*   Created: 2019/05/20 12:38:12 by kmatjeke          #+#    #+#             */
+/*   Updated: 2019/05/20 12:44:11 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <string.h>
+#include "libft.h"
 
-char	*ft_strdup(char *str);
-char	*ft_strcpy(char *dest, char *str);
-char	*ft_strcat(char *s1, const char *s2);
-int		ft_strlen(char *str);
-void	ft_putchar(char c);
-void	ft_putstr(char const *str);
-#endif
+char	*ft_strcat(char *s1, const char *s2)
+{
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+
+	while (s1[i] != '\0')
+		i++;
+	while (s2[j] != '\0')
+	{
+		s1[i] = s2[j];
+		i++;
+		j++;
+	}
+	s1[i] = '\0';
+	return (s1);
+}
