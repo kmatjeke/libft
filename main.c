@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:59:55 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/20 12:09:55 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/05/20 14:37:28 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 int		main(int ac, char *av[])
 {
-	char *a , *b;
-	int i;
-	
+	char	*a;
+	char	*b;
+	int		i;
+
 	a = "hello\0";
-	ft_strcpy (b , a);
+	ft_strcpy(b, a);
 	ft_putstr(b);
-	return(0);
+	return (0);
 }
