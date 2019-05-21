@@ -6,20 +6,22 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:59:55 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/20 14:37:28 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/05/21 12:44:50 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-int		main(int ac, char *av[])
-{
-	char	*a;
-	char	*b;
-	int		i;
+int main() {
+   char *str = "Helloworld";
+   char *result;
+   char *test;
 
-	a = "hello\0";
-	ft_strcpy(b, a);
-	ft_putstr(b);
-	return (0);
+   result = strdup(str);
+   test = ft_strdup(str);
+   printf("The string : %s\n\n", result);
+   printf("The string : %s\n\n", test);
+   return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:06:01 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/20 14:36:28 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/05/21 12:46:12 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@ char	*ft_strdup(char *src)
 {
 	char	*dest;
 	int		i;
-	int		size;
+	int		j;
 
-	size = 0;
-	while (src[size])
-		size++;
-	if (!(dest = (char *)malloc(sizeof(char) * (size + 1))))
+	j = 0;
+	while (src[j])
+		j++;
+	i = -1;
+	if (!src || !(dest = (char *)malloc(sizeof(char) * j + 1)))
 		return (NULL);
-	i = 0;
-	while (src[i] != '\0')
+	while (src[i])
 	{
-		src[i] = dest[i];
+		dest[i] = src[i];
 		i++;
 	}
 	dest[i] = '\0';
