@@ -6,14 +6,14 @@
 #    By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 09:34:34 by kmatjeke          #+#    #+#              #
-#    Updated: 2019/05/20 15:03:38 by kmatjeke         ###   ########.fr        #
+#    Updated: 2019/05/21 09:30:40 by kmatjeke         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =	libft.a
-SRCS =	ft_strdup.c ft_strlen.c ft_putchar.c ft_putstr.c ft_strcpy.c ft_strncpy.c ft_strcat.c ft_strncat.c
+SRCS =	ft_strdup.c ft_strlen.c ft_putchar.c ft_putstr.c ft_strcpy.c ft_strncpy.c ft_strcat.c ft_strncat.c ft_strchr.c
 
-OBJECTS =	ft_strdup.o ft_strlen.o ft_putchar.o ft_putstr.o ft_strcpy.o ft_strncpy.o ft_strcat.o ft_strncat.o
+OBJECTS =	ft_strdup.o ft_strlen.o ft_putchar.o ft_putstr.o ft_strcpy.o ft_strncpy.o ft_strcat.o ft_strncat.o ft_strchr.o
 
 INCLUDES = ./
 
