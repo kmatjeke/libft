@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:39:03 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/21 09:29:52 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/05/21 09:41:39 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t len);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 int		ft_strlen(char *str);
 void	ft_putchar(char c);
 void	ft_putstr(char const *str);
