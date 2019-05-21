@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:59:55 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/21 14:59:12 by kmatjeke         ###   ########.fr       */
+/*   Created: 2019/05/21 14:11:50 by kmatjeke          #+#    #+#             */
+/*   Updated: 2019/05/21 14:57:29 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-int main () {
-   const char haystack[40] = "This is the mother of all strings";
-   const char needle[10] = "point";
-   char *ret;
-   char *test;
+char	*ft_strstr(const char *haystack, const char *needle)
+{
+	int pos;
+	int j;
 
-   ret = strstr(haystack, needle);
-   test = ft_strstr(haystack, needle);
-
-   printf("The substring is: %s\n", ret);
-   printf("The substring is: %s\n", test);
-   
-   return(0);
+	pos = 0;
+	if (!*needle)
+		return ((char*)haystack);
+	while (haystack[pos] != '\0')
+	{
+		j = 0;
+		while (needle[j] == haystack[pos + j])
+		{
+			if (needle[j + 1] == '\0')
+				return ((char*)haystack + pos);
+			j++;
+		}
+		pos++;
+	}
+	return (0);
 }
