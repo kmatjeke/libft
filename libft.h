@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:39:03 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/22 12:48:27 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/05/22 14:26:35 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strlen(char *str);
 int		ft_atoi(const char *str);
+int		ft_isalpha(int c);
 void	ft_putchar(char c);
 void	ft_putstr(char const *str);
 #endif
