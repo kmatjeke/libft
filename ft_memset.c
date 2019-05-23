@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:59:55 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/23 12:34:31 by kmatjeke         ###   ########.fr       */
+/*   Created: 2019/05/23 12:26:51 by kmatjeke          #+#    #+#             */
+/*   Updated: 2019/05/23 12:31:22 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-int main ()
+void	*ft_memset(void *b, int c, size_t len)
 {
-	char str[50];
+	unsigned char *str;
 
-	strcpy(str,"This is string.h library function");
-	puts(str);
-	ft_memset(str,'$',5);
-	puts(str);
-
-	return(0);
+	str = (unsigned char *)b;
+	while (len > 0)
+	{
+		*str++ = (unsigned char)c;
+		len--;
+	}
+	return (b);
 }
