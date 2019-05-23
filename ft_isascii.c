@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:59:55 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/23 09:38:45 by kmatjeke         ###   ########.fr       */
+/*   Created: 2019/05/23 09:16:17 by kmatjeke          #+#    #+#             */
+/*   Updated: 2019/05/23 09:29:36 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
 
-int main ( void )
+int		ft_isascii(int c)
 {
-  int i;
-  char string[11]="Test ÖÄ%1";
-  for (i=0; i <= 11;i++)
-    {
-     if ( ft_isascii(string[i]) != 0 )
-      {
-       printf("character %i isascii char\n",i);
-      }
-    }
-  return 0;
+	int result;
+
+	if (c >= 0 && c <= 127)
+		result = 1;
+	else
+		result = 0;
+	return (result);
 }
