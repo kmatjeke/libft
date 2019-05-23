@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:59:55 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/23 10:55:13 by kmatjeke         ###   ########.fr       */
+/*   Created: 2019/05/23 10:42:56 by kmatjeke          #+#    #+#             */
+/*   Updated: 2019/05/23 10:49:08 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
 
-int main () {
-   int i = 0;
-   char c;
-   char str[] = "TutuorialsPoint.com";
-   
-   while(str[i]) {
-      putchar (ft_toupper(str[i]));
-      i++;
-   }
-   
-   return(0);
+int		ft_toupper(int c)
+{
+	int result;
+
+	if (c >= 'a' && c <= 'z')
+		result = c - 32;
+	else
+		result = c;
+	return (result);
 }
-
