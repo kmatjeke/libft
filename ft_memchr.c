@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:59:55 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/24 10:54:17 by kmatjeke         ###   ########.fr       */
+/*   Created: 2019/05/24 10:42:40 by kmatjeke          #+#    #+#             */
+/*   Updated: 2019/05/24 10:49:16 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-int main ()
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const char str[] = "http://www.tutorialspoint.com";
-	const char ch = 'y';
-	char *ret;
+	unsigned char	*ptr_s;
+	size_t			i;
 
-	ret = ft_memchr(str, ch, strlen(str));
-	printf("String after |%c| is - |%s|\n", ch, ret);
-	return(0);
+	i = 0;
+	ptr_s = (unsigned char *)s;
+	while (i <= n)
+	{
+		if (*(ptr_s++) == (unsigned char)c)
+			return ((void *)--ptr_s);
+		i++;
+	}
+	return (0);
 }
