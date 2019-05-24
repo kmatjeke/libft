@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:59:55 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/24 10:14:16 by kmatjeke         ###   ########.fr       */
+/*   Created: 2019/05/24 09:55:46 by kmatjeke          #+#    #+#             */
+/*   Updated: 2019/05/24 10:11:33 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-int main ()
+void	*ft_memccpy(void *restrict dst, const void *src, int c, size_t n)
 {
-   const char src[50] = "http://www.tutorialspoint.com";
-   char dest[50];
-   strcpy(dest,"Helooooooooooooooooooooooooooo!!");
-   printf("Before memcpy dest = %s\n", dest);
-   ft_memccpy(dest, src,'y', strlen(src)+1);
-   printf("After memcpy dest = %s\n", dest);
-   
-   return(0);
-}
+	unsigned char	*str_dst;
+	unsigned char	*str_src;
+	size_t			i;
 
+	str_dst = (unsigned char *)dst;
+	str_src = (unsigned char *)src;
+	i = 0;
+	while (i < n)
+	{
+		str_dst[i] = str_src[i];
+		if (str_dst[i] == (unsigned char)c)
+			return ((void*)(dst + i + 1));
+		i++;
+	}
+	return (NULL);
+}
