@@ -1,28 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:59:55 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/24 10:34:39 by kmatjeke         ###   ########.fr       */
+/*   Created: 2019/05/24 10:21:54 by kmatjeke          #+#    #+#             */
+/*   Updated: 2019/05/24 10:34:18 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-int main ()
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-   const char src[50] = "http://www.tutorialspoint.com";
-   char dest[50];
-   strcpy(dest,"Helodsfsdfsfsoooooooo!!");
-   printf("Before memcpy dest = %s\n", dest);
-   ft_memmove(dest, src, strlen(src)+1);
-   printf("After memcpy dest = %s\n", dest);
-   
-   return(0);
-}
+	size_t				i;
+	unsigned char		*ptr_dst;
+	const unsigned char	*ptr_src;
 
+	i = 0;
+	ptr_dst = (unsigned char *)dst;
+	ptr_src = (unsigned char *)src;
+	if (ptr_src < ptr_dst)
+	{
+		while (i <= len)
+		{
+			ptr_dst[len - i] = ptr_src[len - i];
+			i++;
+		}
+	}
+	else
+	{
+		while (len > 0)
+		{
+			*(ptr_dst++) = *(ptr_src++);
+			len--;
+		}
+	}
+	return (dst);
+}
