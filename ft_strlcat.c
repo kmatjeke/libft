@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:59:55 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/24 12:56:51 by kmatjeke         ###   ########.fr       */
+/*   Created: 2019/05/24 12:17:09 by kmatjeke          #+#    #+#             */
+/*   Updated: 2019/05/24 13:02:36 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-int main () {
-   char src[50], dest[50];
+size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+	size_t	dest;
+	size_t	source;
+	size_t	i;
 
-   strcpy(src,  "This is source");
-   strcpy(dest, "This is destination");
-
-   strcat(dest, src);
-
-   printf("Final destination string : |%s|", dest);
-   
-   return(0);
+	dest = 0;
+	while (dst[dest] != '\0')
+		dest++;
+	source = 0;
+	while (src[source] != '\0')
+		source++;
+	if (dstsize <= dest)
+		source += dstsize;
+	else
+		source += dest;
+	i = 0;
+	while ((src[i] != '\0') && dest + 1 < dstsize)
+	{
+		dst[dest] = *src[i];
+		dest++;
+		i++;
+	}
+	dst[dest] = '\0';
+	return (source);
 }
