@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/24 10:21:54 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/27 12:09:22 by kmatjeke         ###   ########.fr       */
+/*   Created: 2019/05/27 09:09:08 by kmatjeke          #+#    #+#             */
+/*   Updated: 2019/05/27 09:46:13 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memalloc(size_t size)
 {
-	size_t				i;
-	unsigned char		*ptr_dst;
-	const unsigned char	*ptr_src;
+	void	*str;
+	size_t	i;
 
-	if ((dst == NULL) && (src == NULL))
-		return (NULL);
 	i = 0;
-	ptr_dst = (unsigned char *)dst;
-	ptr_src = (unsigned char *)src;
-	if (ptr_src < ptr_dst)
+	if (!(str = malloc(size)))
+		return (NULL);
+	while (i < size)
 	{
-		while (len-- > 0)
-			ptr_dst[len] = ptr_src[len];
+		((unsigned char *)str)[i] = 0;
+		i++;
 	}
-	else
-	{
-		while (i < len)
-		{
-			ptr_dst[i] = ptr_src[i];
-			i++;
-		}
-	}
-	return (dst);
+	return (str);
 }
