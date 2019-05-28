@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:59:55 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/27 11:41:17 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/05/28 09:32:06 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int main () {
    int ret;
 
 
-   ft_strcpy(str1, "B");
-   ft_strcpy(str2, "A");
+   strcpy(str1, "B");
+   strcpy(str2, "A");
 
-   ret = ft_strcmp(str1, str2);
+   ret = strcmp(str1, str2);
 
    if(ret < 0) {
       printf("str1 is less than str2");
