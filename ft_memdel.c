@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 13:56:26 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/28 16:05:35 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/05/29 11:14:30 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 void	ft_memdel(void **ap)
 {
-	if (*ap)
-		free(*ap);
-	*ap = NULL;
+	if (ap)
+	{
+		if (*ap)
+			free(*ap);
+		*ap = NULL;
+	}
 }
