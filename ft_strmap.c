@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 11:31:55 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/29 12:38:01 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/05/29 15:05:10 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	size_t 	i;
-	size_t	j;
+	int		i;
+	int		j;
 	char	*str;
 
 	if (!s)

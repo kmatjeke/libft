@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/24 10:21:54 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/29 15:05:58 by kmatjeke         ###   ########.fr       */
+/*   Created: 2019/05/29 14:55:43 by kmatjeke          #+#    #+#             */
+/*   Updated: 2019/05/29 15:43:33 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	size_t				i;
-	unsigned char		*ptr_dst;
-	const unsigned char	*ptr_src;
-
-	if ((dst == NULL) && (src == NULL))
-		return (NULL);
-	i = 0;
-	ptr_dst = (unsigned char *)dst;
-	ptr_src = (unsigned char *)src;
-	if (ptr_src < ptr_dst)
+	if (s1 && s2)
 	{
-		while (len-- > 0)
-			ptr_dst[len] = ptr_src[len];
+		if (ft_strncmp(s1, s2, n) == 0)
+			return (1);
+		else
+			return (0);
 	}
-	else
-	{
-		while (i < len)
-		{
-			ptr_dst[i] = ptr_src[i];
-			i++;
-		}
-	}
-	return (dst);
+	return (0);
 }
