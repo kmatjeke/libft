@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:39:03 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/29 15:00:15 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/05/30 11:00:02 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char		*ft_strnew(size_t size);
 char		*ft_strmap(char const *s, char (*f)(char));
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char		*ft_strsub(char const *s, unsigned int start, size_t len);
+char		*ft_strjoin(char const *s1, char const *s2);
 int			ft_strcmp(const char *s1, const char *s2);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_strlen(char *str);
