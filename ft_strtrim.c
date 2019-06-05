@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 09:36:30 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/31 11:48:33 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/06/05 10:01:20 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,11 @@ char	*ft_strtrim(char const *s)
 	{
 		min = 0;
 		max = ft_strlen((char *)s);
-		while (s[min] != '\0' && (s[min] == ' ' || s[min] == '\n' || s[min] == '\t'))
+		while (s[min] != '\0' && (s[min] == ' ' || s[min] == '\n'
+					|| s[min] == '\t'))
 			min++;
-		while (min < max && (s[max - 1] == ' ' || s[max - 1] == '\n' || s[max - 1] == '\t'))
+		while (min < max && (s[max - 1] == ' '
+					|| s[max - 1] == '\n' || s[max - 1] == '\t'))
 			max--;
 		if (min == max)
 			return (ft_strnew(1));
