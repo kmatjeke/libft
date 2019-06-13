@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:03:06 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/06/07 12:54:39 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/06/10 09:32:09 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,12 @@ static size_t	ft_cutwords(const char *str, size_t words, char **r, char c)
 	start = 0;
 	while (wrds < words && str[start])
 	{
-		while(str[start] == c)
+		while (str[start] == c)
 			start++;
 		end = start;
 		while (str[end] && str[end] != c)
 			end++;
-		if(!(r[wrds] = malloc(end - start + 1)))
+		if (!(r[wrds] = malloc(end - start + 1)))
 			return (0);
 		ft_cpy(r[wrds], (char *)str + start, end - start);
 		start = end + 1;
@@ -69,9 +69,9 @@ static size_t	ft_cutwords(const char *str, size_t words, char **r, char c)
 	return (1);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
-	char	**str;
+	char		**str;
 	size_t		i;
 
 	if (!s)
@@ -84,7 +84,7 @@ char	**ft_strsplit(char const *s, char c)
 		str[0] = NULL;
 		return (str);
 	}
-	if (!(str = malloc ((i + 1) * sizeof(*str))))
+	if (!(str = malloc((i + 1) * sizeof(*str))))
 		return (NULL);
 	if (!(ft_cutwords(s, i, str, c)))
 		return (NULL);
