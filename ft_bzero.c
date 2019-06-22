@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:07:24 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/06/22 12:23:06 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/06/22 12:30:51 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t n)
 {
 	char	*str;
-	size_t			i;
+	size_t	i;
 
 	str = (char *)s;
 	i = 0;
