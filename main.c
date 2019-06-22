@@ -5,33 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:59:55 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/28 09:32:06 by kmatjeke         ###   ########.fr       */
+/*   Created: 2019/06/21 15:30:08 by kmatjeke          #+#    #+#             */
+/*   Updated: 2019/06/21 16:23:09 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-int main () {
-   char str1[15];
-   char str2[15];
-   int ret;
+int		main(void)
+{
+	char	str1[15];
+	char	str2[15];
+	char	*ret;
 
-
-   strcpy(str1, "B");
-   strcpy(str2, "A");
-
-   ret = strcmp(str1, str2);
-
-   if(ret < 0) {
-      printf("str1 is less than str2");
-   } else if(ret > 0) {
-      printf("str2 is less than str1");
-   } else {
-      printf("str1 is equal to str2");
-   }
-   
-   return(0);
+	ft_strcpy(str1, "Hello");
+	ft_strcpy(str2, "World");
+	ret = ft_strcat(str1, str2);
+	ft_putstr(ret);
+	return (0);
 }

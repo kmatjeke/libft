@@ -6,7 +6,7 @@
 /*   By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 10:26:48 by kmatjeke          #+#    #+#             */
-/*   Updated: 2019/05/29 10:57:38 by kmatjeke         ###   ########.fr       */
+/*   Updated: 2019/06/21 16:20:43 by kmatjeke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void	ft_striter(char *s, void (*f)(char *))
 {
 	int i;
 
-	if (s)
+	if (!(s) || !(f))
+		return ;
+	else
 	{
 		i = 0;
 		while (s[i] != '\0')
