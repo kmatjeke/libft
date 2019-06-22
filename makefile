@@ -6,7 +6,7 @@
 #    By: kmatjeke <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 09:34:34 by kmatjeke          #+#    #+#              #
-#    Updated: 2019/06/07 13:05:59 by kmatjeke         ###   ########.fr        #
+#    Updated: 2019/06/22 12:02:21 by kmatjeke         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,9 @@ SRCS =	ft_strdup.c	ft_strlen.c	ft_putchar.c\
 		ft_strdel.c	ft_strclr.c	ft_striter.c\
 		ft_striteri.c ft_strmap.c ft_strmapi.c\
 		ft_strequ.c	ft_strnequ.c ft_strsub.c\
-		ft_strjoin.c ft_strtrim.c ft_itoa.c ft_strsplit.c
+		ft_strjoin.c ft_strtrim.c ft_itoa.c ft_strsplit.c\
+		ft_lstadd.c ft_lstdel.c ft_lstdelone.c\
+		ft_lstiter.c ft_lstmap.c ft_lstnew.c
 
 OBJECTS = ft_strdup.o ft_strlen.o ft_putchar.o\
 		  ft_putstr.o ft_strcpy.o ft_strncpy.o\
@@ -45,7 +47,9 @@ OBJECTS = ft_strdup.o ft_strlen.o ft_putchar.o\
 		  ft_strdel.o ft_strclr.o ft_striter.o\
 		  ft_striteri.o ft_strmap.o ft_strmapi.o\
 		  ft_strequ.o ft_strnequ.o ft_strsub.o\
-		  ft_strjoin.o ft_strtrim.o ft_itoa.o ft_strsplit.o
+		  ft_strjoin.o ft_strtrim.o ft_itoa.o ft_strsplit.o\
+		  ft_lstadd.o ft_lstdel.o ft_lstdelone.o\
+		  ft_lstiter.o ft_lstmap.o ft_lstnew.o
 
 INCLUDES = ./
 
