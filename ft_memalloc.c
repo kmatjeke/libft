@@ -15,16 +15,10 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void	*str;
-	size_t	i;
+	void	*mry;
 
-	i = 0;
-	if (!(str = malloc(size)))
-		return (NULL);
-	while (i < size)
-	{
-		((unsigned char *)str)[i] = 0;
-		i++;
-	}
-	return (str);
+	if (!(mry = malloc(size)))
+		return NULL;
+	ft_bzero(mry, size);
+	return (mry);
 }
