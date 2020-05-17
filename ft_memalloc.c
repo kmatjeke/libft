@@ -15,10 +15,10 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void	*mry;
+	void	*mem;
 
-	if (!(mry = malloc(size)))
-		return NULL;
-	ft_bzero(mry, size);
-	return (mry);
+	if (!(mem = (void*)malloc(size)))
+		return (NULL);
+	mem = ft_memset(mem, 0, size);
+	return (mem);
 }
