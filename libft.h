@@ -71,6 +71,7 @@ void				ft_putstr(char const *str);
 void				ft_putstr_fd(char const *str, int fd);
 void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
+void				*ft_memdup(const void *src, size_t size);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 typedef struct		s_list
